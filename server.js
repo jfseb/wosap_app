@@ -26,7 +26,7 @@ const { HTMLConnector, SmartDialog, LoadModel } = require('nlq_abot');
 var compression = require('compression');
 
 //#####################################
-var modelPath = process.env.NLQ_ABOT_MODELPATH || './testmodel';
+var modelPath = process.env.NLQ_ABOT_MODELPATH || (__dirname + '/model');
 var absModelPath = modelPath;
 if( !modelPath) {
   modelPath = "./testmodel";
