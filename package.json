@@ -38,6 +38,7 @@
     "nlq_abot": "0.0.2",
     "pug": "^3.0.0",
     "socket.io": "^3.0.4",
+    "express": "^4.17.1",
     "uuid": "^8.3.2"
   },
   "bin": {
@@ -62,7 +63,6 @@
     "coveralls": "^3.1.0",
     "del": "^6.0.0",
     "elasticlunr": "^0.9.5",
-    "express": "^4.17.1",
     "fixed-data-table-2": "^1.1.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
