@@ -1,0 +1,67 @@
+
+extends ../layout_p
+
+block content
+
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				.navbar-brand(style='bgcolor:orange;color:darkblue;font-family:Arial Black;font-size:15.118px') wosap domain hints
+			ul.nav.navbar-nav.navbar-right #{uid}
+				li
+					.navbar-btn#btn-logout.btn.btn-default(onclick="location.href='/home'")
+						| back to home
+
+	p  &nbsp;
+	p &nbsp;
+	p
+
+	div.well
+		h3 domain "hints"
+			span.pull-right 8 records
+		p
+		span 
+
+		table.table.table-condensed.table-striped
+			thead
+				tr
+					th category
+					th(style="width:10%") count
+					th
+						table
+							tr
+								td synonyms
+							tr
+								td description
+							tr
+								td example values
+			tbody
+
+			tr
+					td.cat_count hints
+					td 8 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td tips and tricks, tips, tricks and expert tips
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "Query entities containig many whitespaces must be quoted, e.g. "List all AppNames in Role "Assortment Specialist - Retail" ."
+											br
+											| (2): "apart from using me, the other way to make me better is to contribute."
+											br
+											| (3): "enjoy SAP"
+											br
+											| ...
+      
+		h3 Version
+			a.small(href="/whatsnew")
+
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/settings.js')

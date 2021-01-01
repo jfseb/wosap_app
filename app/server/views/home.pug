@@ -1,0 +1,43 @@
+
+// preset form values if we receive a userdata object //
+- label = typeof(user) != 'undefined' ? ('Welcome ' + user) : 'Welcome guest'
+- icon = userid ? '/css/ui/person_tie.png' : '/css/ui/External.png'
+- userid = user
+- conversationid = conversationid
+- namelink = ('/settings')
+
+
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='description', content='Fiori Reference Libary, Fiori Applications, SAP R3 Transport Objects')
+		meta(name="google-site-verification" content="N0AAiwdDXn3KBjPyevFxO4hshRNznLkD-o46jR90QJo")
+		meta(name='conversationid',content="#{conversationid}")
+		title ask the wosap
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		script(src='socket.io/socket.io.js')
+		link(rel='stylesheet', href='/css/index_style.css')
+	body(style="line-height:1em; -webkit-app-region: drag;")
+		img(title="User status", style='width:18px;height:18px',src="/css/ui/External.png")
+		div#header-wrap(style='-webkit-app-region: drag; text-size:20')
+			ul.nav(style='')
+				li.nav.dropdown(style='float:left!important')
+					a.dropbtn(href='javascript:void(0)', style="margin:5px 10px;")
+						img.dropbtn(title="menu", style='width:18px;height:18px', onclick='doExpand()', src="/css/ui/person_tie.png")
+					div#aDropDown.dropdown-content
+						a(href="/about") about
+						a(href="/modeldata") models
+						a(href="/termsofuse") terms of use
+						a(href="/whatsnew") what's new
+						a(href="/legal_de") impressum (german)
+						a(href="/legal_en") legal disclosure (english)
+				li.nav.center(style="float:center!important;padding: 8px 10px") ask the wosap
+
+		div(style='margin-top:20px', data-theme='a')
+			ul.ui-listview(style='-webkit-app-region: no-drag', data-role='listview')
+				li.request(data-icon="false")
+					textarea#growme.ui-input-textX(rows='5', value='Acbdef') list all sample questions
+
+
+		script(src='/js/index.js')

@@ -1,0 +1,154 @@
+
+// preset form values if we receive a userdata object //
+- user = user
+
+extends layout_p
+
+block content
+
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				.navbar-brand(style='bgcolor:orange;color:darkblue;font-family:Arial Black;font-size:15.118px') wosap what's new
+			ul.nav.navbar-nav.navbar-right #{uid}
+				li
+					.navbar-btn#btn-logout.btn.btn-default(onclick="location.href='/home'")
+						| back to home
+
+	p  &nbsp;
+	p &nbsp;
+	p
+
+	div.well
+
+		table.table.table-condensed.table-striped
+			thead
+				tr
+					th date
+					th category
+					th feature
+					th example queries (where applicable)
+			tbody
+				tr
+					td 09.06.2017
+					td internal
+					td fix conversation id targeting and entity recognition
+				tr
+					td 07.03.2017
+					td model
+					td updated data with recent reference library additions (S8)
+				tr
+					td 12.02.2017
+					td internal
+					td algorithm switched to be be more selective, indication of unrecognized words
+				tr
+					td 12.02.2017
+					td Query by Example table
+					td tabular view on Fiori BOM reference data
+						a(href="table_fioribom?c3,4,5,20,21,8,14") (example)
+					td make table for  fiori intent, AppName, Application Component, Business Catalog, Technical Catalog , BSPName and ODataService
+				tr
+					td 31.01.2017
+					td internal
+					td cookie timeout for login session extended
+				tr
+					td 31.01.2017
+					td internal
+					td major switch of string comparison &amp; weighting
+				tr
+					td 31.01.2017
+					td site
+					td descriptive pages of models, linked from&nbsp;
+							a(href="about") about page,
+							| e.g.&nbsp;
+							a(href="domains/FioriBOM") Fiori Reference Apps (Fiori BOM)
+				tr
+					td 26.01.2017
+					td model
+					td
+						a(href="domains/FioriBOM") Fiori Backend Catalogs model
+				tr
+					td 26.01.2017
+					td model
+					td SOBJ_Tables (SAP Transport objects and tables)
+				tr
+					td 26.01.2017
+					td model
+					td removed some unused models
+				tr
+					td 22.01.2017
+					td query
+					td describe &lt;fact&gt;|&lt;category&lt;
+						br
+						| describe &lt;fact&gt;|&lt;category&lt; in domain &lt;domain&gt;
+					td "describe element name"
+						br
+						| "describe W_FRM_CUST_PLANT in domain FioriBOM"
+						br
+						| "Tell me about BSPName"
+				tr
+					td 22.01.2017
+					td usability
+					td change local history
+					td
+				tr
+					td 22.01.2017
+					td site
+					td what's new page
+					td
+				tr
+					td 22.01.2017
+					td query enhancement
+					td filter in Domain for List All with binary operator (starting with, ending with , ... )
+						b in domain XX
+					td "list all element names starting with "ni"
+						em in domain IUPAC"
+				tr
+					td 21.01.2017
+					td query
+					td multiple "categories" in list all, what is
+					td "list all Application Component, BSPNAme, fiori intent for maintain
+						br
+						| "list all &lt;catgory&gt; containing &lt;F"
+				tr
+					td 20.01.2017
+					td site
+					td new about page, styles
+					td
+				tr
+					td 19.01.2017
+					td query
+					td filter containing, starting with, ending with
+					td "list all &lt;catgory&gt; starting with &lt;string&gt;"
+						br
+						| "list all &lt;catgory&gt; containing &lt;F"
+				tr
+					td 10.01.2017
+					td query
+					td filter by &lt;domain&gt;
+					td "list all categories in &lt;domain&gt"
+				tr
+					td 20.01.2017
+					td tech
+					td always on, traffic monitoring
+					td
+				tr
+					td 10.01.2017
+					td query
+					td metaqueries
+					td "list all categories"
+				tr
+					td 10.01.2017
+					td query
+					td metaqueries
+					td "list all domains"
+				tr
+					td 10.12.2020
+					td simplification
+					td exchange of query engine
+					td
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/settings.js')

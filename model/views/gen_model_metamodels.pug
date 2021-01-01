@@ -1,0 +1,231 @@
+
+extends ../layout_p
+
+block content
+
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				.navbar-brand(style='bgcolor:orange;color:darkblue;font-family:Arial Black;font-size:15.118px') wosap domain metamodel
+			ul.nav.navbar-nav.navbar-right #{uid}
+				li
+					.navbar-btn#btn-logout.btn.btn-default(onclick="location.href='/home'")
+						| back to home
+
+	p  &nbsp;
+	p &nbsp;
+	p
+
+	div.well
+		h3 domain "metamodel"
+			span.pull-right 46 records
+		p
+		span metamodel
+
+		table.table.table-condensed.table-striped
+			thead
+				tr
+					th category
+					th(style="width:10%") count
+					th
+						table
+							tr
+								td synonyms
+							tr
+								td description
+							tr
+								td example values
+			tbody
+
+			tr
+					td.cat_count category
+					td 46 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Object property
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "AppDocumentationLinkKW", "AppKey", "AppName", "ApplicationComponent" ...
+      
+			tr
+					td.cat_count category description
+					td 38 distinct values in 82.6% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Description of the category
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): ""
+											br
+											| (2): " A business role name, e.g. "Purchaser", for a technical role (PFCG), try BusinessRoleName"
+											br
+											| (3): " The DDIC Table "
+											br
+											| ...
+      
+			tr
+					td.cat_count category synonyms
+					td 19 distinct values in 41.3% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td synonyms for the category
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "Application Component", "BSP", "BSP Path", "Business Role Name", "Fiori App" ...
+      
+			tr
+					td.cat_count columns
+					td 43 distinct values in 93.5% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td the columns in order which are shown in a table
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "AppKey" or "TransportObject"
+      
+			tr
+					td.cat_count domain
+					td 46 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td the model name
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "FioriBOM", "SOBJ Tables", "example questions" or "hints"
+      
+			tr
+					td.cat_count domain description
+					td 43 distinct values in 93.5% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td description of the model
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "Information about Fiori apps with links to the Fiori Reference apps library"
+											br
+											| (2): "R/3 Transport objects and associated tables. This domains allows to quickly lookup up if and in what transport object a given table content is transported, e.g. "What is the Transport Object, Primary Table for /UIF/LREPDCONT" "
+											br
+											| 
+      
+			tr
+					td.cat_count exactmatch
+					td 29 distinct values in 63.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td whether a match on a given value has to be precise
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "false" or "true"
+      
+			tr
+					td.cat_count LUNRIndex
+					td 25 distinct values in 54.3% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td whether to include the category in a LUNR Index
+							tr.cat_samplevalues
+								td The sole value is "true"
+      
+			tr
+					td.cat_count QBE
+					td 28 distinct values in 60.9% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td whether to include the category in QBE tables
+							tr.cat_samplevalues
+								td The sole value is "true"
+      
+			tr
+					td.cat_count showURI
+					td 1 distinct values in 2.2% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td display uri
+							tr.cat_samplevalues
+								td The sole value is "true"
+      
+			tr
+					td.cat_count showURIRank
+					td 1 distinct values in 2.2% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td display uri rank
+							tr.cat_samplevalues
+								td The sole value is "true"
+      
+			tr
+					td.cat_count uri
+					td 0 distinct values in 0.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td link to domain description
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| ""
+      
+			tr
+					td.cat_count wordindex
+					td 33 distinct values in 71.7% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td whether to include the category in a LUNR Index
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "false" or "true"
+      
+		h3 Version
+			a.small(href="/whatsnew")
+
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/settings.js')

@@ -1,0 +1,200 @@
+{
+  "props": {
+    "uri": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "uri"
+    },
+    "uri_rank": {
+      "type": "Number",
+      "trim": true,
+      "_m_category": "uri_rank"
+    },
+    "AppKey": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "AppKey",
+      "index": true
+    },
+    "SAPUI5ComponentId": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "SAPUI5ComponentId",
+      "index": true
+    },
+    "appId": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "appId",
+      "index": true
+    },
+    "FioriIntent": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "FioriIntent",
+      "index": true
+    } ],
+    "UITechnology" : {
+      "type" : "String",
+      "trim" : true,
+      "_m_category": "UITechnology",
+      "index" : true
+    },
+    "AppName": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "AppName",
+      "index": true
+    },
+    "ApplicationComponent": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "ApplicationComponent",
+      "index": true
+    },
+    "RoleName": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "RoleName",
+      "index": true
+    },
+    "ApplicationType": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "ApplicationType",
+      "index": true
+    }],
+    "BSPName": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "BSPName",
+      "index": true
+    },
+    "BSPApplicationURL": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "BSPApplicationURL",
+      "index": true
+    },
+    "releaseName": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "releaseName",
+      "index": true
+    },
+    "releaseId": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "releaseId",
+      "index": true
+    },
+    "BusinessCatalog": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "BusinessCatalog",
+      "index": true
+    } ],
+    "TechnicalCatalog": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "TechnicalCatalog",
+      "index": true
+    },
+    "detailsurl": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "detailsurl"
+    },
+    "BSPPackage": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "BSPPackage",
+      "index": true
+    },
+    "AppDocumentationLinkKW": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "AppDocumentationLinkKW"
+    },
+    "BusinessRole": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "BusinessRole",
+      "index": true
+    }],
+    "BusinessGroup": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "BusinessGroup",
+      "index": true
+    }],
+    "BusinessGroupDescription": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "BusinessGroupDescription",
+      "index": true
+    } ],
+    "PrimaryODataService": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "PrimaryODataService",
+      "index": true
+    },
+    "ODataServices": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "ODataServices",
+      "index": true
+    }],
+    "SemanticObject": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "SemanticObject",
+      "index": true
+    }],
+    "SemanticAction": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "SemanticAction",
+      "index": true
+    } ],
+    "FrontendSoftwareComponent": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "FrontendSoftwareComponent",
+      "index": true
+    }],
+    "TransactionCode":[ {
+      "type": "String",
+      "trim": true,
+      "_m_category": "TransactionCode",
+      "index": true
+    } ],
+    "URLParameters": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "URLParameters"
+    } ],
+    "PrimaryODataPFCGRole": {
+      "type": "String",
+      "trim": true,
+      "_m_category": "PrimaryODataPFCGRole",
+      "index": true
+    },
+    "ExternalReleaseNames": [{
+      "type": "String",
+      "trim": true,
+      "_m_category": "ExternalReleaseNames",
+      "index": true
+    }]
+  },
+  "index": {
+    "ArtifactId": "text",
+    "FioriIntent": "text",
+    "AppName": "text",
+    "BSPApplicationURL": "text",
+    "BusinessGroupDescription": "text",
+    "SemanticObject": "text",
+    "SemanticAction": "text"
+  }
+}

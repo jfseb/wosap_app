@@ -1,0 +1,81 @@
+
+extends ../layout_p
+
+block content
+
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				.navbar-brand(style='bgcolor:orange;color:darkblue;font-family:Arial Black;font-size:15.118px') wosap domain example questions
+			ul.nav.navbar-nav.navbar-right #{uid}
+				li
+					.navbar-btn#btn-logout.btn.btn-default(onclick="location.href='/home'")
+						| back to home
+
+	p  &nbsp;
+	p &nbsp;
+	p
+
+	div.well
+		h3 domain "example questions"
+			span.pull-right 23 records
+		p
+		span 
+
+		table.table.table-condensed.table-striped
+			thead
+				tr
+					th category
+					th(style="width:10%") count
+					th
+						table
+							tr
+								td synonyms
+							tr
+								td description
+							tr
+								td example values
+			tbody
+
+			tr
+					td.cat_count example question
+					td 23 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td questions, sample questions and sample question
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "List all ODataServices for FI-FIO-GL"
+											br
+											| (2): "List all appNames in ApplicationComponent PLM-FIO-RCP"
+											br
+											| (3): "What is the BSPName for Fiori App "Manage Labels""
+											br
+											| ...
+      
+			tr
+					td.cat_count questionId
+					td 0 distinct values in 0.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| ""
+      
+		h3 Version
+			a.small(href="/whatsnew")
+
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/settings.js')

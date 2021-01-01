@@ -1,0 +1,207 @@
+
+extends ../layout_p
+
+block content
+
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				.navbar-brand(style='bgcolor:orange;color:darkblue;font-family:Arial Black;font-size:15.118px') wosap domain SOBJ Tables
+			ul.nav.navbar-nav.navbar-right #{uid}
+				li
+					.navbar-btn#btn-logout.btn.btn-default(onclick="location.href='/home'")
+						| back to home
+
+	p  &nbsp;
+	p &nbsp;
+	p
+
+	div.well
+		h3 domain "SOBJ Tables"
+			span.pull-right 20 records
+		p
+		span R/3 Transport objects and associated tables. This domains allows to quickly lookup up if and in what transport object a given table content is transported, e.g. "What is the Transport Object, Primary Table for /UIF/LREPDCONT" 
+
+		table.table.table-condensed.table-striped
+			thead
+				tr
+					th category
+					th(style="width:10%") count
+					th
+						table
+							tr
+								td synonyms
+							tr
+								td description
+							tr
+								td example values
+			tbody
+
+			tr
+					td.cat_count category
+					td 0 distinct values in 0.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Category of the transport
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| ""
+      
+			tr
+					td.cat_count clientSpecific
+					td 20 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Whether the object is client specific
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "false" or "true"
+      
+			tr
+					td.cat_count Object name length
+					td 20 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Length of transport key
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "10", "20", "40" or "79"
+      
+			tr
+					td.cat_count PrimaryTable
+					td 19 distinct values in 95.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td Primary Table
+							tr.cat_description
+								td Primary table of transport object, if existing
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "false" or "true"
+      
+			tr
+					td.cat_count recordKey
+					td 0 distinct values in 0.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| ""
+      
+			tr
+					td.cat_count Shorttext
+					td 20 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Short text of transport object
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "ALV: HTML Templates (Raw Version)"
+											br
+											| (2): "ALV: HTML Templates (Translated Templates)"
+											br
+											| (3): "Business object types"
+											br
+											| ...
+      
+			tr
+					td.cat_count Table
+					td 20 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td Tables, Database Table and Transport Table
+							tr.cat_description
+								td  The DDIC Table 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/UIF/LREPDATTR", "/UIF/LREPDATTRCD", "/UIF/LREPDCONT" ...
+      
+			tr
+					td.cat_count TableTransportKeySpec
+					td 20 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Key specification for the table
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/&", "/&/*", "/&/L/*", "/C/&", "/C/&/*", "/C/&/L/*", "/L/&/*" or "AA/&/*"
+      
+			tr
+					td.cat_count TranslationRelevant
+					td 20 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Boolean ("true","false") whether object is translation relevant
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "false" or "true"
+      
+			tr
+					td.cat_count TransportObject
+					td 20 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td SOBJ and Transport Key
+							tr.cat_description
+								td The transport object key (SOBJ)
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "01DY", "LRCC", "LRCD", "LTHR", "LTHT", "LTRC" or "SOBJ"
+      
+			tr
+					td.cat_count Type
+					td 0 distinct values in 0.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| ""
+      
+		h3 Version
+			a.small(href="/whatsnew")
+
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/settings.js')

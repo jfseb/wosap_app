@@ -1,0 +1,6 @@
+{ "columns"  : [""],"columnsDescription" : {
+  },
+"columnsDefaultWidth" : {
+  },
+"serIndex" :{"version":"0.9.5","fields":[],"ref":"id","documentStore":{"docs":{},"docInfo":{},"length":0,"save":false},"index":{},"pipeline":["trimmer","stopWordFilter","stemmer"]},"data":[]
+}

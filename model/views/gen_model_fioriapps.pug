@@ -1,0 +1,517 @@
+
+extends ../layout_p
+
+block content
+
+	nav.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				.navbar-brand(style='bgcolor:orange;color:darkblue;font-family:Arial Black;font-size:15.118px') wosap domain FioriBOM
+			ul.nav.navbar-nav.navbar-right #{uid}
+				li
+					.navbar-btn#btn-logout.btn.btn-default(onclick="location.href='/home'")
+						| back to home
+
+	p  &nbsp;
+	p &nbsp;
+	p
+
+	div.well
+		h3 domain "FioriBOM"
+			span.pull-right 11599 records
+		p
+		span Information about Fiori apps with links to the Fiori Reference apps library
+
+		table.table.table-condensed.table-striped
+			thead
+				tr
+					th category
+					th(style="width:10%") count
+					th
+						table
+							tr
+								td synonyms
+							tr
+								td description
+							tr
+								td example values
+			tbody
+
+			tr
+					td.cat_count AppDocumentationLinkKW
+					td 1807 distinct values in 15.6% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Link to documentation
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "http://aiokeh.wdf.sap.corp:50000/SAPIrExtHelp/BCO_COMMON.asp?IWB_INDUSTRY=FIORI_MDG&TMP_IWB_TASK=PREVIEW2&_LOIO=70B46654F8290E4EE10000000A423F68&RELEASE=100_SP06&LANGUAGE=EN"
+											br
+											| (2): "http://aiokeh.wdf.sap.corp:50000/SAPIrExtHelp/BCO_COMMON.asp?IWB_INDUSTRY=S4HANA_OP&TMP_IWB_TASK=PREVIEW2&_LOIO=34428754DCCBE85EE10000000A44176D&RELEASE=1511_002&LANGUAGE=EN"
+											br
+											| (3): "http://aiokeh.wdf.sap.corp:50000/SAPIrExtHelp/BCO_COMMON.asp?IWB_INDUSTRY=S4HANA_OP&TMP_IWB_TASK=PREVIEW2&_LOIO=40E7C954925EC30AE10000000A441470&RELEASE=1511_002&LANGUAGE=EN"
+											br
+											| ...
+      
+			tr
+					td.cat_count appId
+					td 11598 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td fioriId
+							tr.cat_description
+								td the Fiori appId , note that multiple records exists, as the same ID may change over time with versions
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/ACCGO/ACCRUAL_WC", "/ACCGO/APPL_LOG_DISP", "/ACCGO/APP_DISP" ...
+      
+			tr
+					td.cat_count AppKey
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td a technical key, combination of appId and releaseId
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/ACCGO/ACCRUAL_WC/S18OP", "/ACCGO/APPL_LOG_DISP/S18OP", "/ACCGO/APP_DISP/S18OP" ...
+      
+			tr
+					td.cat_count ApplicationComponent
+					td 11338 distinct values in 97.7% of records
+					td
+						table
+							tr.cat_synonyms
+								td Application Component, Application components, ApplicationComponents, Support Component and Component
+							tr.cat_description
+								td Support Component, e.g. "FIN-FIO-CCD"
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "AC-INT", "AP-MD-BP", "AP-MD-BP-UI", "AP-PPE", "BC-ABA-SC", "BC-BMT-OM", "BC-BMT-WFM" ...
+      
+			tr
+					td.cat_count ApplicationType
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Whether the application is classical or not
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "Analytical", "Fact sheet", "Reuse Component", "SAP GUI", "Transactional" ...
+      
+			tr
+					td.cat_count AppName
+					td 11598 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td Fiori App
+							tr.cat_description
+								td Human legible Application name
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "(Deprecated) Define Plants Material CNAE (Sales) - Brazil"
+											br
+											| (2): "(Deprecated) Define Plants Service CNAE (Sales) - Brazil"
+											br
+											| (3): "(Obsolete) Create Advance Tax Return File - Austria"
+											br
+											| ...
+      
+			tr
+					td.cat_count BSPApplicationURL
+					td 1815 distinct values in 15.6% of records
+					td
+						table
+							tr.cat_synonyms
+								td BSP Path, BSP Url, BSP Urls and Resource Path
+							tr.cat_description
+								td url of the BSP application in an ABAP system, see BSP name for the technical storage  /sab/bc/ui5_ui5/.. 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "/default_host/sap/bc/bsp/sap/"
+											br
+											| (2): "/default_host/sap/opu/odata/sap/"
+											br
+											| (3): "/sap/bc/bsp/sap/MM_SUPPIV_REFS1"
+											br
+											| ...
+      
+			tr
+					td.cat_count BSPName
+					td 2020 distinct values in 17.4% of records
+					td
+						table
+							tr.cat_synonyms
+								td BSP, BSP Name and BSP repository
+							tr.cat_description
+								td Name of the Business Server Page 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "-", "/BA1/ACD", "/BA1/CIL", "/LOGS4H/ANALYS", "/LOGS4H/DSHBRD" ...
+      
+			tr
+					td.cat_count BSPPackage
+					td 2020 distinct values in 17.4% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Package (DevClass) of the BSP Application
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "-", "/BA1/UA_ACD", "/BA1/UA_CIL", "/LOGS4H/FIORI_FND", "/SAI/UI" ...
+      
+			tr
+					td.cat_count BusinessCatalog
+					td 6481 distinct values in 55.9% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td The SAP Business catalog which references the application in a "TechnicalCatalog" or "BackendCatalog" (for GUI/WDA transactions
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/SAI/BC_LEASING", "/SAI/BC_SAI", "/UIUS4G/BC_BILLING_MOSB" ...
+      
+			tr
+					td.cat_count BusinessGroup
+					td 4396 distinct values in 37.9% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Business group of the application
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/LOGS4H/UIL_GROUP", "/SAI/BCG_LEASING", "/UIUS4G/BCG_BILLING_MOSB" ...
+      
+			tr
+					td.cat_count BusinessGroupDescription
+					td 4235 distinct values in 36.5% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "ABAP Dictionary", "AP Accountant", "AP Operations" ...
+      
+			tr
+					td.cat_count BusinessRole
+					td 6366 distinct values in 54.9% of records
+					td
+						table
+							tr.cat_synonyms
+								td Business Role Name and Backend PFCG Role
+							tr.cat_description
+								td Business Role associated with the application
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/LOGS4H/DATA_PROTECT_OFFICER", "/SAI/ACCOUNTANT", "/SAI/LSOR_ACCOUNTANT" ...
+      
+			tr
+					td.cat_count detailsurl
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/services/SingleApp.xsodata/Details(fioriId='/ACCGO/ACCRUAL_WC',releaseId='S18OP')?$expand=Release_Group%2cBusinessCatalogPerApp%2cRequiredODataServices%2cICFNodes%2cRequiredODataServices%2cWebDynproICFNodes%2cGTMScreenshots%2cSuccessors%2cPredecessors%2cODataServices%2cSearchComponent%2cHANAKPIs%2cHANAServices%2cHANARoles%2cNotes%2cRelated_Apps`"
+											br
+											| (2): "https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/services/SingleApp.xsodata/Details(fioriId='/ACCGO/APPL_LOG_DISP',releaseId='S18OP')?$expand=Release_Group%2cBusinessCatalogPerApp%2cRequiredODataServices%2cICFNodes%2cRequiredODataServices%2cWebDynproICFNodes%2cGTMScreenshots%2cSuccessors%2cPredecessors%2cODataServices%2cSearchComponent%2cHANAKPIs%2cHANAServices%2cHANARoles%2cNotes%2cRelated_Apps`"
+											br
+											| (3): "https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/services/SingleApp.xsodata/Details(fioriId='/ACCGO/APP_DISP',releaseId='S18OP')?$expand=Release_Group%2cBusinessCatalogPerApp%2cRequiredODataServices%2cICFNodes%2cRequiredODataServices%2cWebDynproICFNodes%2cGTMScreenshots%2cSuccessors%2cPredecessors%2cODataServices%2cSearchComponent%2cHANAKPIs%2cHANAServices%2cHANARoles%2cNotes%2cRelated_Apps`"
+											br
+											| ...
+      
+			tr
+					td.cat_count ExternalReleaseNames
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td (all) External Release names
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "SAP S/4HANA 1511 (S3OP)", "SAP S/4HANA 1511 FPS01 (S4OP)", "SAP S/4HANA 1511 FPS02 (S5OP)" ...
+      
+			tr
+					td.cat_count FioriIntent
+					td 11424 distinct values in 98.5% of records
+					td
+						table
+							tr.cat_synonyms
+								td fiori intents, intents and intent
+							tr.cat_description
+								td A combination of "#" <SemanticObject> - <Semanticaction> which appears in the URL of the Fiori Launchpad when addressing the application
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "#*-analyzeSBKPIDetailsS4HANA", "#ABOPCustomSort-configure", "#ABOPRun-monitor" ...
+      
+			tr
+					td.cat_count FrontendSoftwareComponent
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Frontend Software Component
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "LOGS4H 100", "SAIUI 200", "SAP_UI 755", "UIACS 12S", "UIACS 13S", "UIAPFI70 300" ...
+      
+			tr
+					td.cat_count ODataServices
+					td 1841 distinct values in 15.9% of records
+					td
+						table
+							tr.cat_synonyms
+								td OData Service Names
+							tr.cat_description
+								td OData services : Technical name of the OData Service (Primary and others)
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/AIF/CONF_REC_ASSGN_SRV", "/BSNAGT/FIORI_MONI_SRV", "/BTL/TR_ODATA_ASSIGN_DISP_SRV" ...
+      
+			tr
+					td.cat_count PrimaryODataPFCGRole
+					td 286 distinct values in 2.5% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/IWPGW/RT_WF_USR", "/SCWM/EXPERT", "/SRMSMC/CATEGORY_MANAGER" ...
+      
+			tr
+					td.cat_count PrimaryODataService
+					td 1841 distinct values in 15.9% of records
+					td
+						table
+							tr.cat_synonyms
+								td Primary OData Service Name
+							tr.cat_description
+								td OData service : Technical name of the OData Service operating on a Gateway server (and implemented in the R/3 Backend) serving data for UI5 based Fiori Apps
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/AIF/CONF_REC_ASSGN_SRV", "/BSNAGT/FIORI_MONI_SRV", "/BTL/TR_ODATA_ASSIGN_DISP_SRV" ...
+      
+			tr
+					td.cat_count releaseId
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "S10OP", "S11OP", "S12OP", "S13OP", "S14OP", "S15OP", "S16OP", "S17OP", "S18OP", "S3OP", "S5OP", "S6OP" ...
+      
+			tr
+					td.cat_count releaseName
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td releaseName
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "SAP S/4HANA 1511", "SAP S/4HANA 1511 FPS02", "SAP S/4HANA 1610" ...
+      
+			tr
+					td.cat_count RoleName
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td Role Name
+							tr.cat_description
+								td  A business role name, e.g. "Purchaser", for a technical role (PFCG), try BusinessRoleName
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "Academic Advisor"
+											br
+											| (2): "Accounts Payable Accountant"
+											br
+											| (3): "Accounts Payable Accountant - Procurement"
+											br
+											| ...
+      
+			tr
+					td.cat_count SAPUI5ComponentId
+					td 1931 distinct values in 16.6% of records
+					td
+						table
+							tr.cat_synonyms
+								td component name, ui5 component name, library name, javascript name, javascript id, manifest id and appdescriptor id
+							tr.cat_description
+								td  for UI5 based applications, name of the UI5 Component, e.g. "ui.s2p.mm.supconf.monitors1". 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| ".E.1545296558881", ".E.1557816314717", ".E.1563363289758" ...
+      
+			tr
+					td.cat_count SemanticAction
+					td 11424 distinct values in 98.5% of records
+					td
+						table
+							tr.cat_synonyms
+								td Semantic Action
+							tr.cat_description
+								td The second part of the "fiori intent", identifying the action, e.g. "maintain", "create" 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "Analyze", "AnalyzeAverageDeliveryTime", "AnalyzeFulfillmentRatio" ...
+      
+			tr
+					td.cat_count SemanticObject
+					td 11424 distinct values in 98.5% of records
+					td
+						table
+							tr.cat_synonyms
+								td Semantic Object
+							tr.cat_description
+								td The first part of the "fiori intent", identifying the Business entity, e.g. "SalesOrder","GLAcount" used for generic navigation 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "*", "ABOPCustomSort", "ABOPRun", "ABOPSegment", "ABOPVariant", "ACMMasterData" ...
+      
+			tr
+					td.cat_count TechnicalCatalog
+					td 11411 distinct values in 98.4% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Technical catalog, basic definition of "TargetMapping" and "Tile" for fiori (UI5) Applications
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/LOGS4H/UIL_CATALOG", "/SAI/TC", "/UIUS4G/BC_BILLING_MOSB", "N/A", "NA" ...
+      
+			tr
+					td.cat_count TransactionCode
+					td 10122 distinct values in 87.3% of records
+					td
+						table
+							tr.cat_synonyms
+								td Transactions, TransactionCode and TransactionCodes
+							tr.cat_description
+								td For GUI based transaction, the transaciton code behind intent, a classical R/3 SAPGUi transaction
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "/ACCGO/ACCRUAL_WC", "/ACCGO/APPL_LOG_DISP", "/ACCGO/APP_DISP" ...
+      
+			tr
+					td.cat_count uri
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td link to fiori app reference library
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| (1): "https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#/detail/Apps('/ACCGO/ACCRUAL_WC')/S18OP"
+											br
+											| (2): "https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#/detail/Apps('/ACCGO/APPL_LOG_DISP')/S18OP"
+											br
+											| (3): "https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#/detail/Apps('/ACCGO/APP_DISP')/S18OP"
+											br
+											| ...
+      
+			tr
+					td.cat_count uri_rank
+					td 11599 distinct values in 100.0% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td Sort criteria for URI
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "1", "10", "100", "1000", "10000", "10001", "10002", "10003", "10004", "10005", "10006", "10007", "10008" ...
+      
+			tr
+					td.cat_count URLParameters
+					td 1352 distinct values in 11.7% of records
+					td
+						table
+							tr.cat_synonyms
+								td &nbsp;
+							tr.cat_description
+								td 
+							tr.cat_samplevalues
+								td Possible values are ...
+											br
+											| "*", "A0CALMONTH", "ABBID", "AccountingDocument", "ActivityType" ...
+      
+		h3 Version
+			a.small(href="/whatsnew")
+
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/settings.js')
