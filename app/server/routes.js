@@ -1,8 +1,5 @@
 
-//var AM = require('./modules/account-manager');
-//var EM = require('./modules/email-dispatcher');
 
-var SR = require('./modules/getstats');
 var fs = require('fs');
 var debug = require('debug');
 var debuglog = debug('routes');
@@ -160,20 +157,8 @@ module.exports = function(app, modelPath, modelNames) {
   });
 
 
-  app.get('/print', function(req, res) {
-    AM.getAllRecords( function(e, accounts){
-      res.render('print', { title : 'Account List', accts : accounts });
-    });
-  });
-  app.get('/prints', function(req, res) {
-    SR.getStats( function(a, accounts){
-      console.log('here res ' + JSON.stringify(accounts));
-      res.render('prints', { title : 'stats', stats : accounts });
-    });
-  });
-
   ['Cosmos','IUPAC','Philosophers_elements', 'SOBJ_Tables',  'Fiori_Backend_Catalogs', 'TWF_fields','TWF_countries',  'SAP_Transaction_codes', 'FioriBOM','GeneticDNA'].forEach(function(sPage) {
-    app.get('/domains/' + sPage, function(req, res) {
+    app.get('/xdomains/' + sPage, function(req, res) {
       res.render('models/' + sPage, {
         pagetitle : 'domain ' + sPage,
         title : 'domain ' + sPage,
