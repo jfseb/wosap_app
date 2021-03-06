@@ -54,8 +54,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //'https://jfseb-abot.herokuapp.com'
 
 app.get('*',function(req,res,next){
-  if((req.headers['x-forwarded-proto'] !='https') && process.env.PORT)
-    res.redirect(process.env.ABOT_SERVER +req.url);
+  if((req.headers['x-forwarded-proto'] !='https') && process.env.PORT && process.env.WOSAP_SERVER)
+    res.redirect(process.env.WOSAP_SERVER + req.url);
   else
     next(); /* Continue to other routes if we're not redirecting */
 });

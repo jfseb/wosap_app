@@ -1,8 +1,5 @@
 [
   {
-    "example_question": "what are the sanitation facilities in tuvalu"
-  },
-  {
     "example_question": "What is the BSPName for Fiori App \"Manage Labels\""
   },
   {
@@ -63,9 +60,9 @@
     "example_question": "list all categories"
   },
   {
-    "example_question": "list all example commands"
+    "example_question": "list all hints"
   },
   {
-    "example_question": "list all hints"
+    "example_question": "CHECK out MENU -> \"models\" -> table views"
   }
 ]

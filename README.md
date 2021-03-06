@@ -15,7 +15,7 @@ Goal is to host this on an aribtrary model folder
 ```
 npm install 
 
-nmp test
+npm test
 
 npm run server
 ```

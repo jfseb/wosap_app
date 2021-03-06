@@ -5,8 +5,8 @@ module.exports = {
     filename: 'qbetable.js',
     path: __dirname + '/app/public/js'
   },
- // mode : 'production',
- mode : 'development',
+  // mode : 'production',
+  mode : 'development',
   watch : false,
     // Enable sourcemaps for debugging webpack's output.
   devtool: 'source-map',
